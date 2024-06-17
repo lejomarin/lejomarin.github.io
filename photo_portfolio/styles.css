@@ -1,0 +1,381 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /*Rubik', sans-serif;  Changed to Rubik Light*/
+    color: #333;
+    background-color: rgb(238, 239, 241);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 2; /* Ensure header is above the banner */
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 300; /* Rubik Light */
+    text-transform: uppercase; /* Ensure the logo text is in uppercase */
+    margin-top: 55px;
+    margin-left: 55px;
+    margin-bottom: 20px;
+    line-height: 1;
+    color: #4e5657; /* Ensure the logo text is visible over the image */
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.subtitle {
+    font-size: 20px; /* Smaller font size */
+    color: #8d8f90; /* Lighter color */
+    margin-top: 10px;
+    margin-left: 55px; /* Align with logo */
+}
+
+
+.description-text {
+    font-size: 20px; /* Smaller font size */
+    color: #4e5657; /* Lighter color */
+    margin-top: 15px;
+    margin-left: 55px; /* Align with logo */
+
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav a {
+    margin: 10px 0;
+    margin-left: 55px;
+    text-decoration: none;
+    color: #8d8f90; /* Ensure the nav links are visible over the image */
+    font-size: 18px;
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: static;
+    background-color: transparent;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #979a9b; /* Lighter shade */
+    padding: 10px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align content to the start */
+    align-items: flex-start; /* Align items to the start */
+    overflow: visible; /* Prevent overflow */
+
+
+    padding: 20px;
+    margin-top: 100px; /* Adjust based on header size */
+    width: 100%;
+    height: calc(100% - 160px); /* Ensure the main content takes full height */
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    align-items: flex-start; /* Align items to the top */
+    overflow-x: auto; /* Enable horizontal scrolling */
+
+    /*width: calc(100% - 90px);  Adjust based on header width */
+    max-width: 100%; /* Limit the width of the gallery */
+    margin: auto; /* Center the gallery */
+    
+    
+    margin-left: 35%;
+    
+    
+    padding-bottom: 20px; /* Add padding to prevent scrollbar overlap */
+}
+
+.photo-gallery img {
+    width: 40%; /* Scale images to 40% of their original size */
+    margin-right: 30px; /* Add some spacing between images */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Specific styles for the Santa Marta gallery */
+.photo-gallery-marta img {
+    width: 65%; /* Scale images to 60% of their original size for this gallery */
+}
+
+.about-photo {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right: 100px; /* Move photo slightly to the left */
+}
+
+.about-photo img {
+    max-width: 500px;
+    margin-left: 60px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.biography {
+    max-width: 60%; /* Adjust the max-width to make it less constrained */
+    text-align: left;
+    margin-left: 55px; /* Align with the content */
+    margin-right: 55px; 
+}
+
+.biography p { 
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4e5657;
+    margin-top: 20px; /* Add some margin to the top for spacing */
+}
+
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/banners/banner-1.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the whole viewport */
+    z-index: 1; /* Ensure the banner is behind the header */
+}
+
+/* Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 3; 
+    left: 0;
+    top: 25px;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(238, 243, 243,0.9); 
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Caption of Modal Image */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #8d8f90;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        margin-left: 25px;
+        
+    }
+
+    .subtitle {
+        font-size: 18px; /* Adjust subtitle font size for smaller screens */
+        margin-left: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .description-text {
+        margin-bottom: 65px;
+    }
+
+    .main-content {
+        
+        flex-direction: column; /* Stack items vertically */
+        align-items: left;
+        height: auto; /* Allow scrolling */
+        overflow: visible; /* Enable scrolling */
+        
+    }
+
+    .biography {
+        max-width: 90%; /* Increase max-width for smaller screens */
+        margin-left: 30px; /* Adjust margin for smaller screens */
+        margin-right: 20px; /* Adjust margin for smaller screens */
+    }
+
+    .about-photo {
+        text-align: left; /* Center content on small screens */
+        margin-left: -50px; /* Adjust margin for smaller screens */
+        margin-right: 20px;  /*Center photo*/
+        width: 90%;
+    }
+
+    .about-photo img {
+        width: 100%; /* Adjust width for small screens */
+        max-width: none; /* Remove max-width constraint */
+        margin-bottom: 20px;
+
+    }
+
+    .photo-gallery { /* finally solved my issue on mobile by figuring this one out */
+        align-items: left; /* i inspected the page and realised it was this div/class, not the next one*/
+        margin-left: 10px;
+        flex-wrap: wrap;
+    }
+
+    .photo-gallery img {
+        align-items: left;
+        width: 90%; /* Full width for mobile */
+        max-width: none; /* Remove max-width constraint */
+        margin-top: 80px;
+        
+        margin-bottom: 20px; /* Space between stacked images */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: 20px; /* Smaller font size */
+        margin-top: 5px; /* Smaller margin */
+        margin-left: 35px;
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; /* Full width */
+    }
+
+    .photo-gallery {
+        flex-direction: column; /* Stack photos vertically on mobile */
+        align-items: center;
+        width: 100%; /* Full width */
+        padding-bottom: 20px;
+    }
+
+    .photo-gallery img {
+        width: 100%; /* Adjust width for mobile */
+        max-width: 300px;
+        margin-bottom: 20px; /* Space between stacked images */
+    }
+
+    .biography {
+        max-width: 100%; /* Full width for extra small screens */
+        margin-left: 20px; /* Adjust margin for extra small screens */
+        margin-right: 20px; /* Adjust margin for extra small screens */
+
+    }
+
+    .about-photo {
+        /* Center photo on extra small screens */
+        margin: 20px auto; /* Center photo on extra small screens */
+
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-photo img {
+        width: 100%; /* Full width for extra small screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}

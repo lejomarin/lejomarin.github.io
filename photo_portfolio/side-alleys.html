@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Alleys of Toronto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Ando Marin</a></div>
+            <div class="subtitle">Side Alleys of Toronto</div>
+            <!--div class="description-text">Shot on digital during April-May 2023</div-->
+    </header>
+    <div class="main-content">
+        <div class="photo-gallery" id="photo-gallery">
+            <!-- Photos will be added here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Modal to display the zoomed image -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <img class="modal-content" id="modalImage">
+        <span class="next">&#10095;</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
