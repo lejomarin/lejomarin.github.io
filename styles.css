@@ -292,7 +292,7 @@ nav a {
 
     .biography {
         max-width: 100%; /* Increase max-width for smaller screens */
-        margin-left: 10px; /* Adjust margin for smaller screens */
+        margin-left: 0px; /* Adjust margin for smaller screens */
         margin-right: 20px; /* Adjust margin for smaller screens */
     }
 
@@ -300,7 +300,7 @@ nav a {
         text-align: left; /* Center content on small screens */
         margin-left: -50px; /* Adjust margin for smaller screens */
         margin-right: 20px;  /*Center photo*/
-        width: 100%;
+        width: 90%;
     }
 
     .about-photo img {
@@ -374,22 +374,21 @@ nav a {
     }
 
     .biography {
-        max-width: 100%; /* Full width for extra small screens */
-        margin-left: 20px; /* Adjust margin for extra small screens */
+        max-width: 90%; /* Full width for extra small screens */
+        /*margin-left: 0px;  Adjust margin for extra small screens */
         margin-right: 20px; /* Adjust margin for extra small screens */
 
     }
 
     .about-photo {
         /* Center photo on extra small screens */
-        margin: 20px auto; /* Center photo on extra small screens */
-
-        text-align: center;
-        width: 100%;
+        margin: auto; /* Center photo on extra small screens */
+        text-align: left;
     }
 
     .about-photo img {
+        margin: 0px;
         width: 100%; /* Full width for extra small screens */
-        max-width: none; /* Remove max-width constraint */
+        max-width: 90%; /* Remove max-width constraint */
     }
 }
