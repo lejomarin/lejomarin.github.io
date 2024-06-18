@@ -12,14 +12,14 @@ body, html {
 }
 
 header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px;
+    padding: 10px;
     z-index: 2; /* Ensure header is above the banner */
 }
 
@@ -27,6 +27,7 @@ header {
     font-size: 50px;
     font-weight: 300; /* Rubik Light */
     text-transform: uppercase; /* Ensure the logo text is in uppercase */
+
     margin-top: 55px;
     margin-left: 55px;
     margin-bottom: 20px;
@@ -105,7 +106,7 @@ nav a {
 
 
     padding: 20px;
-    margin-top: 100px; /* Adjust based on header size */
+    margin-top: 30px; /* Adjust based on header size */
     width: 100%;
     height: calc(100% - 160px); /* Ensure the main content takes full height */
 }
@@ -258,9 +259,17 @@ nav a {
 }
 
 @media (max-width: 768px) {
+    header {
+        width: 90%;
+        font-size: 70px;
+        margin-bottom: 5px;
+    }
+
     .logo {
-        font-size: 40px; /* Adjust font size for smaller screens */
-        margin-left: 15px;
+        font-size: 70px; /* Adjust font size for smaller screens */
+        width: 100%;
+        margin-left: 5px;
+        margin-bottom: 10px;
         
     }
 
@@ -270,7 +279,7 @@ nav a {
     }
 
     .description-text {
-        margin-bottom: 65px;
+        margin-bottom: 25px;
     }
 
     .main-content {
@@ -278,13 +287,12 @@ nav a {
         flex-direction: column; /* Stack items vertically */
         align-items: left;
         height: auto; /* Allow scrolling */
-        overflow: visible; /* Enable scrolling */
-        
+        overflow-y: visible; /* Enable scrolling */
     }
 
     .biography {
-        max-width: 90%; /* Increase max-width for smaller screens */
-        margin-left: 30px; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Increase max-width for smaller screens */
+        margin-left: 10px; /* Adjust margin for smaller screens */
         margin-right: 20px; /* Adjust margin for smaller screens */
     }
 
@@ -292,13 +300,14 @@ nav a {
         text-align: left; /* Center content on small screens */
         margin-left: -50px; /* Adjust margin for smaller screens */
         margin-right: 20px;  /*Center photo*/
-        width: 90%;
+        width: 100%;
     }
 
     .about-photo img {
-        width: 100%; /* Adjust width for small screens */
-        max-width: none; /* Remove max-width constraint */
+        width: 90%; /* Adjust width for small screens */
+        max-width: 90%; /* Remove max-width constraint */
         margin-bottom: 20px;
+        margin-left: 10px;
 
     }
 
@@ -312,7 +321,7 @@ nav a {
         align-items: left;
         width: 100%; /* Full width for mobile */
         max-width: none; /* Remove max-width constraint */
-        margin-top: 60px;
+        margin-top: 20px;
         
         margin-bottom: 20px; /* Space between stacked images */
     }
@@ -321,26 +330,28 @@ nav a {
 @media (max-width: 480px) {
     header {
         align-items: center;
+        margin-bottom: 10px;
     }
 
     .logo {
         font-size: 48px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .subtitle {
         font-size: 20px; /* Smaller font size */
         margin-top: 5px; /* Smaller margin */
         margin-left: 35px;
+
     }
 
     nav {
-        align-items: center;
+        align-items: left;
     }
 
     nav a {
         font-size: 14px;
-        text-align: center;
+        text-align: left;
     }
 
     .main-content {
