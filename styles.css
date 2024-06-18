@@ -298,13 +298,13 @@ nav a {
 
     .about-photo {
         text-align: left; /* Center content on small screens */
-        margin-left: -50px; /* Adjust margin for smaller screens */
+        margin-left: 0px; /* Adjust margin for smaller screens */
         margin-right: 20px;  /*Center photo*/
-        width: 90%;
+        width: 80%;
     }
 
     .about-photo img {
-        width: 90%; /* Adjust width for small screens */
+        width: 80%; /* Adjust width for small screens */
         max-width: 90%; /* Remove max-width constraint */
         margin-bottom: 20px;
         margin-left: 10px;
@@ -374,7 +374,7 @@ nav a {
     }
 
     .biography {
-        max-width: 90%; /* Full width for extra small screens */
+        max-width: 80%; /* Full width for extra small screens */
         /*margin-left: 0px;  Adjust margin for extra small screens */
         margin-right: 20px; /* Adjust margin for extra small screens */
 
@@ -388,7 +388,7 @@ nav a {
 
     .about-photo img {
         margin: 0px;
-        width: 100%; /* Full width for extra small screens */
+        width: 90%; /* Full width for extra small screens */
         max-width: 90%; /* Remove max-width constraint */
     }
 }
